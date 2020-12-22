@@ -1,0 +1,15 @@
+
+ban:
+    script
+    meta
+    src
+    href
+    head
+    body
+
+-- simpel XSS
+-- <script> to startpage
+-- css animations
+-- onload
+-- <link>, <meta>, 
+
