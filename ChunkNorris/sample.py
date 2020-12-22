@@ -1,5 +1,5 @@
 import random
-from Crypto.Util.number import *
+from Crypto.Util.number import * # pylint: disable=unused-wildcard-import
 import gmpy2
 import sys
 
