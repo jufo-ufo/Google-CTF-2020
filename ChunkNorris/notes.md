@@ -39,7 +39,7 @@ print('c =', hex(pow(bytes_to_long(flag), e, n)))
 
 ### Gen Prime
  - Probably The weak spot aka the security hole
- - number is always 1024 bits long, bit[1023] ist always set!
+ - number is always 1024 bits long, first and last bit is always set!
 
 ---
 ## Ideas
