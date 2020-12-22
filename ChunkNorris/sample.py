@@ -2,6 +2,7 @@ import random
 from Crypto.Util.number import * # pylint: disable=unused-wildcard-import
 import gmpy2
 import sys
+import time
 
 a = 0xe64a5f84e2762be5
 chunk_size = 64
@@ -34,11 +35,14 @@ if len(sys.argv) < 3:
 iterations = int(sys.argv[2])
 data = []
 
+start = time.time()
+
 for i in range(iterations):
     data.append(gen_prime(bits))
-    progressbar(iterations, i+1, "Generating :")
+    proc = int((time.time()-start)/(i+1)*(iterations-i+1))
+    progressbar(iterations, i+1, "Generating :", "Reaming Time: {}".format(time.strftime("%Hh %Mmin %Ss", time.gmtime(proc))))
 
-print()
+print(time.time()-start)
 
 with open(sys.argv[1], "w") as f:
     for i in range(iterations):
